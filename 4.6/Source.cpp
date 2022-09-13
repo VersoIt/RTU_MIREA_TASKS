@@ -1,59 +1,29 @@
 #include <iostream>
 #include <exception>
 #include <iomanip>
-
-
-int getIntegerValueBySymbol(char symbol)
-{
-	switch (symbol)
-	{
-	case 'I':
-		return 1;
-		break;
-	case 'V':
-		return 5;
-		break;
-	case 'X':
-		return 10;
-		break;
-	case 'L':
-		return 50;
-		break;
-	case 'C':
-		return 100;
-		break;
-	case 'D':
-		return 500;
-		break;
-	case 'M':
-		return 1000;
-		break;
-	default:
-		throw std::exception("Такого знака нету в римском алфавите.");
-		break;
-	}
-}
-
+#include <map>
 
 // Декодирует римскую запись числа
-int decodate(std::string number)
+int decodate(const std::string& number)
 {
+	std::map<char, int> roman_comparison{
+		{'I', 1},
+		{'V', 5},
+		{'X', 10},
+		{'L', 50},
+		{'C', 100},
+		{'D', 500},
+		{'M', 1000},
+	};
+
 	int sum = 0;
-	if (number.size() != 0)
+	for (int i = 0; i < number.size(); ++i)
 	{
-		char last_symbol = number[0];
-		sum += getIntegerValueBySymbol(last_symbol);
-		int last_symbol_value = getIntegerValueBySymbol(last_symbol);
-
-		for (int i = 1; i < number.size(); ++i)
-		{
-			int current_symbol_value = getIntegerValueBySymbol(number[i]);
-			if (last_symbol_value < current_symbol_value)
-				throw std::exception("Неправильная запись числа!");
-
-			last_symbol = number[i];
-			sum += current_symbol_value;
-		}
+		int value = roman_comparison[number[i]];
+		if (number.size() != (i + 1) && value < roman_comparison[number[i + 1]])
+			sum -= value;
+		else
+			sum += value;
 	}
 
 	return sum;
