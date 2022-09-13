@@ -1,6 +1,6 @@
 ﻿  Source.cpp
-C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(23,50): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(23,30): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(24,48): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(24,28): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(24,50): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(24,30): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(25,48): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(25,28): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
   4.5.vcxproj -> C:\Users\Ruslan\source\repos\Homework\x64\Debug\4.5.exe

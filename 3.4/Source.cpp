@@ -2,7 +2,6 @@
 #include <vector>
 #include <algorithm>
 #include <ctime>
-#include <algorithm>
 #include <fstream>
 #include <string>
 
@@ -19,11 +18,20 @@ int main(int argc, char* argv)
 	std::string line;
 
 	while (getline(file, line))
-		std::for_each(line.begin(), line.end(), [](const auto e) 
+	{
+		std::string current_number;
+
+		for (int i{ 0 }; i < line.length(); ++i)
+		{
+			if (isdigit(line[i]))
+				current_number += line[i];
+			else
 			{
-				if (isdigit(e))
-					std::cout << e; 
-			});
+				std::cout << (current_number.length() == 0 ? "" : current_number + " ");
+				current_number = "";
+			}
+		}
+	}
 
 	file.close();
 

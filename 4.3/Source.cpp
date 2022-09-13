@@ -71,6 +71,8 @@ int main()
 			std::cin >> a >> b >> c;
 			std::cout << "Площадь треугольника равна " << getTriangleArea(a, b, c) << std::endl;
 			break;
+		default:
+			std::cout << "Такой фигуры не существует!" << std::endl;
 		}
 	}
 	catch (exception exc)
