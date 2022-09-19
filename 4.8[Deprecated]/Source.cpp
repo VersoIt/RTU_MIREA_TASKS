@@ -1,15 +1,14 @@
 #include <iostream>
+#include <iomanip>
+
 
 using namespace std;
-
-
 
 
 int main()
 {
 
 	using namespace std;
-
 	setlocale(LC_ALL, "Russian");
 
 	float first_data[3][4] {
@@ -53,7 +52,7 @@ int main()
 	{
 		cout << " | ";
 		for (int j = 0; j < 2; ++j)
-			cout << product[i][j] << " | ";
+			cout << setw(4) << product[i][j] << " | ";
 
 		cout << endl;
 	}

@@ -16,8 +16,8 @@ double getTriangleArea(float a, float b, float c)
 {
 	float p = (a + b + c) / 2;
 
-	if (((a + b) <= c) or ((a + c) <= b) or ((b + c) <= a))
-		throw new exception("Треугольника с такими сторонами не существует!");
+	if ((((a + b) <= c) or ((a + c) <= b) or ((b + c) <= a)) || a <= 0 || b <= 0 || c <= 0)
+		throw exception("Треугольника с такими сторонами не существует!");
 
 	return sqrt(p * (p - a) * (p - b) * (p - c));
 }
@@ -61,14 +61,14 @@ int main()
 			float width;
 			float height;
 
-			std::cout << "Вы выбрали прямоугольник\nВвеите его данные через пробел: [ширина] [высота]: ";
+			std::cout << "Вы выбрали прямоугольник\nВведите его данные через пробел: [ширина] [высота]: ";
 			std::cin >> width >> height;
 			std::cout << "Площадь прямоугольника равна " << getRectangleArea(width, height) << std::endl;
 
 			break;
 		case FigureTypes::Triangle:
 
-			std::cout << "Вы выбрали трегольник\nВвеите его данные через пробел: [a] [b] [c]: ";
+			std::cout << "Вы выбрали трегольник\nВведите его данные через пробел: [a] [b] [c]: ";
 			float a, b, c;
 			std::cin >> a >> b >> c;
 			std::cout << "Площадь треугольника равна " << getTriangleArea(a, b, c) << std::endl;

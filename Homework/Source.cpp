@@ -2,18 +2,20 @@
 #include <ctime>
 #include <fstream>
 
-// «Заем»
+
+// Заем
 int main(int argc, char* argv)
 {
+	using namespace std;
 	setlocale(LC_ALL, "Russian");
 	float S, p, n;
 
-	std::cout << "Введите S p n через пробел" << std::endl;
-	std::cin >> S >> p >> n;
+	cout << "Введите S, p и n через пробел" << endl;
+	cin >> S >> p >> n;
 
 	float r = p / 100;
 
-	std::cout << "m = " << (S * r * pow((1 + r), n)) / (12 * (pow(1 + r, n) - 1)) << std::endl;
+	cout << "m = " << (S * r * pow((1 + r), n)) / (12 * (pow(1 + r, n) - 1)) << endl;
 
 	return EXIT_SUCCESS;
 }

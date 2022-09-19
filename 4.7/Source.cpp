@@ -5,7 +5,7 @@ int reccurent(int i, int S = 0)
 {
 	if (i <= 0)
 	{
-		std::cout << "i = 0, S = 0" << std::endl;
+		std::cout << "i = 0 | S = 0" << std::endl;
 		return 0;
 	}
 

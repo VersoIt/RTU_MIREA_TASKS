@@ -1,3 +1,3 @@
 ﻿  Source.cpp
-C:\Users\Ruslan\source\repos\Homework\4.7\Source.cpp(25,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Ruslan\source\repos\Homework\4.7\Source.cpp(26,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   4.7.vcxproj -> C:\Users\Ruslan\source\repos\Homework\x64\Debug\4.7.exe

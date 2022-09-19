@@ -16,24 +16,32 @@ int main(int argc, char* argv)
 	std::cin >> file_name;
 
 	std::fstream file(file_name, std::ios::in);
-	std::string line;
-
-	while (getline(file, line))
+	if (file.is_open())
 	{
-		std::string current_number;
-
-		for (int i{ 0 }; i < line.length(); ++i)
+		std::string line;
+		while (getline(file, line))
 		{
-			if (isdigit(line[i]))
-				current_number += line[i];
-			else
+			std::string current_number;
+
+			for (int i{ 0 }; i < line.length(); ++i)
 			{
-				std::cout << (current_number.length() == 0 ? "" : current_number + " ");
-				current_number = "";
+				if (isdigit(line[i]))
+					current_number += line[i];
+				else
+				{
+					std::cout << (current_number.length() == 0 ? "" : current_number + " ");
+					current_number = "";
+				}
 			}
 		}
+		file.close();
 	}
-
+	else
+	{
+		file.close();
+		std::cout << "Такого файла не существует" << std::endl;
+		return EXIT_FAILURE;
+	}
 	file.close();
 
 	return EXIT_SUCCESS;

@@ -6,19 +6,29 @@
 
 int main(int argc, char* argv)
 {
+	using namespace std;
 	setlocale(LC_ALL, "Russian");
 
-	std::cout << "Введите имя файла: " << std::endl;
-	std::string file_name;
-	std::cin >> file_name;
+	cout << "Введите имя файла: ";
+	string file_name;
+	cin >> file_name;
 
-	std::fstream file(file_name, std::ios::in);
-	std::string line;
+	fstream file(file_name, ios::in);
+	if (file.is_open())
+	{
+		string line;
 
-	while (getline(file, line))
-		std::cout << line << std::endl;
+		while (getline(file, line))
+			cout << line << std::endl;
 
-	file.close();
+		file.close();
+	}
+	else
+	{
+		file.close();
+		cout << "Такого файла не существует..." << endl;
+		return EXIT_FAILURE;
+	}
 
 	return EXIT_SUCCESS;
 }

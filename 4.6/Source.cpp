@@ -33,7 +33,7 @@ int decodate(const std::string& number)
 // Автоматный распознаватель
 int main(int argc, char* argv)
 {
-	setlocale(LC_ALL, "russian");
+	setlocale(LC_ALL, "Russian");
 
 	std::cout << "Введите римскую запись числа: ";
 

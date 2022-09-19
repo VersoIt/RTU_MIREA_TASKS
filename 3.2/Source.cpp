@@ -12,7 +12,7 @@ int main(int argc, char* argv)
 	setlocale(LC_ALL, "Russian");
 	float S, m, n;
 
-	std::cout << "¬ведите S m n через пробел" << std::endl;
+	std::cout << "¬ведите S, m и n через пробел" << std::endl;
 	std::cin >> S >> m >> n;
 
 
