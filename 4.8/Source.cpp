@@ -36,29 +36,29 @@ int main()
 		cout << "1) " << std::endl;
 		{
 			auto [celler, _] = product.getCoordOfMaxValueInColumn(ActionTypes::SALES_AMOUNT);
-			cout << "Продавец #" << celler + 1 << " выручил больше всего денег с продажи." << endl;
+			cout << "Seller #" << celler + 1 << " made the most money from sales." << endl;
 
 			auto [taxer, __] = product.getCoordOfMinValueInColumn(ActionTypes::SALES_AMOUNT);
-			cout << "Продавец #" << taxer + 1 << " выручил меньше всего денег с продажи." << endl;
+			cout << "Seller #" << taxer + 1 << " made the least amount of money from the sale." << endl;
 		}
 
 		cout << "2) " << std::endl;
 		{
 			auto [celler, _] = product.getCoordOfMaxValueInColumn(ActionTypes::TAXES_AMOUNT);
-			std::cout << "Продавец #" << celler + 1 << " получил наибольшие комиссионные." << endl;
+			std::cout << "Seller #" << celler + 1 << " received the highest commission." << endl;
 
 			auto [taxer, __] = product.getCoordOfMinValueInColumn(ActionTypes::TAXES_AMOUNT);
-			cout << "Продавец #" << taxer + 1<< " получил наименьшие комиссионные." << endl;
+			cout << "Seller #" << taxer + 1<< " received the lowest commission." << endl;
 		}
 
 		cout << "3) " << std::endl;
-		cout << "Общая сумма денег за проданные товары составляет " << product.sumColumn(ActionTypes::SALES_AMOUNT) << endl;
+		cout << "The total amount of money for goods sold is " << product.sumColumn(ActionTypes::SALES_AMOUNT) << "." << endl;
 
 		cout << "4) " << std::endl;
-		cout << "Всего продавцы получили " << product.sumColumn(ActionTypes::TAXES_AMOUNT) << " комиссионных" << endl;
+		cout << "Total sellers received " << product.sumColumn(ActionTypes::TAXES_AMOUNT) << " commisions." << endl;
 
 		cout << "5) " << std::endl;
-		std::cout << "Общая сумма денег, прошедшая через руки продавцов составляет " << product.sumColumn(ActionTypes::SALES_AMOUNT) + product.sumColumn(ActionTypes::TAXES_AMOUNT) << std::endl;
+		std::cout << "The total amount of money that has passed through the hands of sellers is " << product.sumColumn(ActionTypes::SALES_AMOUNT) + product.sumColumn(ActionTypes::TAXES_AMOUNT) << "." << std::endl;
 
 		
 
