@@ -5,4 +5,6 @@ C:\Users\Ruslan\source\repos\Homework\4.8\Matrix.cpp(14,34): warning C4244: ар
               _Ty=float
           ]
 C:\Users\Ruslan\source\repos\Homework\4.8\Matrix.cpp(105,77): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  Source.cpp
+  Создание кода...
   4.8.vcxproj -> C:\Users\Ruslan\source\repos\Homework\x64\Debug\4.8.exe

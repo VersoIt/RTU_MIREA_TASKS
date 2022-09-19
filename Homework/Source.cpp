@@ -2,6 +2,7 @@
 #include <ctime>
 #include <fstream>
 
+// «Ηΰεμ»
 int main(int argc, char* argv)
 {
 	setlocale(LC_ALL, "Russian");

@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\Ruslan\source\repos\Homework\5.1\Source.cpp(32,30): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Ruslan\source\repos\Homework\5.1\Source.cpp(40,58): warning C4244: +=: преобразование "double" в "long", возможна потеря данных
+  5.1.vcxproj -> C:\Users\Ruslan\source\repos\Homework\x64\Debug\5.1.exe

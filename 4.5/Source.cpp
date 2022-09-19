@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// Синусоида
 int main(void)
 {
     HWND hWnd = GetConsoleWindow();

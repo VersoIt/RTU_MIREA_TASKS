@@ -4,7 +4,7 @@
 #include "ActionTypes.hpp"
 
 
-
+// Умножение матриц
 int main()
 {
 	using namespace std;

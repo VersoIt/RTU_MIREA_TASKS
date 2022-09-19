@@ -1,5 +1,6 @@
 #include <iostream>
 
+// Былая слава
 int main()
 {
 	using namespace std;

@@ -5,6 +5,8 @@
 #include <algorithm>
 #include <fstream>
 
+
+// —суда
 int main(int argc, char* argv)
 {
 	setlocale(LC_ALL, "Russian");

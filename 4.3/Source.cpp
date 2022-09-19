@@ -35,6 +35,8 @@ enum FigureTypes
 	Round = 0b0011
 };
 
+
+// Геометрические фигуры
 int main()
 {
 	setlocale(LC_ALL, "Russian");

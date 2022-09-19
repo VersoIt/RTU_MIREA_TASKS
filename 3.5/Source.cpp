@@ -3,6 +3,8 @@
 #include <fstream>
 #include <string>
 
+
+// Сортировка букв
 int main(int argc, char* argv)
 {
 	setlocale(LC_ALL, "Russian");

@@ -1,15 +1,14 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
-#include <ctime>
-#include <algorithm>
 #include <fstream>
 #include <string>
+
+// Копирование файла
 
 int main(int argc, char* argv)
 {
 	setlocale(LC_ALL, "Russian");
 
+	std::cout << "Введите имя файла: " << std::endl;
 	std::string file_name;
 	std::cin >> file_name;
 

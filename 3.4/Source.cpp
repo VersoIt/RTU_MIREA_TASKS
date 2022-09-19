@@ -5,6 +5,7 @@
 #include <fstream>
 #include <string>
 
+// «Фильтр»
 int main(int argc, char* argv)
 {
 	setlocale(LC_ALL, "Russian");

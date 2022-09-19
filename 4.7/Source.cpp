@@ -19,6 +19,7 @@ int reccurent(int i, int S = 0)
 	return S;
 }
 
+// Генератор псевдослучайных чисел
 int main()
 {
 	setlocale(LC_ALL, "Russian");
