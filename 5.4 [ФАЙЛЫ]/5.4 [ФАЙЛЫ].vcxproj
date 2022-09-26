@@ -24,7 +24,7 @@
     <ProjectGuid>{49b8d9ac-fe94-436e-8f12-8e67822322d7}</ProjectGuid>
     <RootNamespace>My54ФАЙЛЫ</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>5.4.19</ProjectName>
+    <ProjectName>5.3.19</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

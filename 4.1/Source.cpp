@@ -3,28 +3,47 @@
 #include <string>
 
 
+bool pass_string(const std::string& str)
+{
+	for (int i = 0; i < str.size(); ++i)
+	{
+		if (!isdigit(str[i]))
+			return false;
+
+	}
+
+	return true;
+}
+
 // «Файл»
 int main(int argc, char* argv)
 {
+	using namespace std;
 	setlocale(LC_ALL, "Russian");
 
-	std::string file_path;
-	std::cout << "Введите название файла, куда вы будете записывать числа: ";
-	std::cin >> file_path;
+	string file_path;
+	cout << "Введите название файла, куда вы будете записывать числа: ";
+	cin >> file_path;
 
-	std::fstream file(file_path, std::ios::out);
+	fstream file(file_path, ios::out);
 	if (file.is_open())
 	{
 		const int numbers_count{ 10 };
 
 		for (int i{ 0 }; i < numbers_count; ++i)
 		{
-			int number;
+			string number;
 
-			std::cout << "Число #" << i + 1 << ": ";
-			std::cin >> number;
+			cout << "Число #" << i + 1 << ": ";
+			cin >> number;
 
-			file << number << " ";
+			if (!pass_string(number))
+			{
+				cout << "Введенная строка не является числом!" << endl;
+				return EXIT_FAILURE;
+			}
+			
+			file << stoi(number.c_str()) << " ";
 		}
 
 		file.close();

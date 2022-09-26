@@ -7,9 +7,8 @@
 
 using namespace std;
 
-int char_into_radix_format(char symbol)
+unsigned long long char_into_radix_format(char symbol)
 {
-
 	/*
 	* if we subtract 7 the position of the capital letter in the asci table from the zero symbol, 
 	* then we get the correct convenient representation for the number
@@ -27,16 +26,26 @@ int char_into_radix_format(char symbol)
 	return symbol;
 }
 
+char radix_format_into_char(int number)
+{
+	if (number < 10)
+		return '0' + number;
+
+	return 'A' + number - 10;
+}
+
 string convert(const string& number, int base_radix, int new_radix)
 {
-	int length = number.length();
-	long number_in_10_base{ 0 };
+	long length = number.length();
+	unsigned long long number_in_10_base{ 0 };
 
 	for (int i = length - 1; i >= 0; --i)
 	{
-		int current_digit{ char_into_radix_format(number[i]) };
+		unsigned long long current_digit{ char_into_radix_format(number[i]) };
+
 		if (current_digit >= base_radix)
 			throw exception(std::format("Number system with base %d cannot contain the number %d!", base_radix, current_digit).c_str());
+
 		number_in_10_base += char_into_radix_format(number[i]) * pow(base_radix, length - i - 1);
 	}
 
@@ -44,7 +53,7 @@ string convert(const string& number, int base_radix, int new_radix)
 
 	while (number_in_10_base > 0)
 	{
-		result = to_string(number_in_10_base % new_radix) + result;
+		result = radix_format_into_char(number_in_10_base % new_radix) + result;
 		number_in_10_base /= new_radix;
 	}
 
@@ -54,7 +63,6 @@ string convert(const string& number, int base_radix, int new_radix)
 // Системы счисления
 int main()
 {
-
 	string original_number;
 
 	int base_radix;

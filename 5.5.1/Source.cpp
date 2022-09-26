@@ -23,6 +23,12 @@ int main()
 	cout << "Enter N: ";
 	cin >> N;
 
+	if (N <= 0)
+	{
+		cout << "Incorrect number!" << endl;
+		return EXIT_FAILURE;
+	}
+
 	cout << "Answer = " << calculate(N) << endl;
 
 	return EXIT_SUCCESS;

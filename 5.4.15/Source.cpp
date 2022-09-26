@@ -67,7 +67,7 @@ int main()
 	else
 	{
 		cout << "Invalid file path!" << endl;
-		return -1;
+		return EXIT_FAILURE;
 	}
 
 	

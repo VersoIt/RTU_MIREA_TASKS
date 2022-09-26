@@ -1,31 +1,30 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
-#include <ctime>
-#include <algorithm>
-#include <fstream>
 
 
 // —суда
 int main(int argc, char* argv)
 {
+	using namespace std;
 	setlocale(LC_ALL, "Russian");
+
 	float S, m, n;
 
-	std::cout << "¬ведите S, m и n через пробел" << std::endl;
-	std::cin >> S >> m >> n;
+	cout << "¬ведите S, m и n через пробел" << endl;
+	cin >> S >> m >> n;
 
+	double p = 0.00001;
 
-	for (float p{ 0 }; p < 100; p += 0.01)
+	cout << "—читаем..." << endl;
+	while ((S * p / 100 * pow((1 + p / 100), n)) / (12 * (pow((1 + p / 100), n) - 1)) < m)
+		p += 0.0001;
+
+	if (p > 100)
 	{
-		float r{ p / 100 };
-
-		if ((S * r * pow((1 + r), n)) / (12 * (pow(1 + r, n) - 1)) == m)
-		{
-			std::cout << p << std::endl;
-			break;
-		}
+		cout << "„исло процентов не может превышать 100." << endl;
+		return EXIT_FAILURE;
 	}
+
+	cout << "p = " << p << "%" << endl;
 
 	return EXIT_SUCCESS;
 }

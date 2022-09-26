@@ -5,24 +5,41 @@ int main()
 {
 	using namespace std;
 
-	for (int i = 0; i < 13; i++)
-	{
-		if (i < 7 && i > 0)
-		{
-			for (int j = 0; j < 8; j++)
-				cout << "* ";
+	const char star = '+';
+	const char line = '_';
+	const char limit = '|';
 
-			for (int j = 0; j < 40; j++)
-				cout << "_";
+	for (int height = 0; height < 13; ++height)
+	{
+
+		if (height > 0 && height < 7)
+		{
+			cout << limit;
+
+			for (int states_width = 0; states_width < 8; ++states_width)
+				cout << star << ' ';
+
+			for (int default_width = 0; default_width < 19; ++default_width)
+				cout << line;
 		}
 		else
 		{
-			for (int j = 0; j < 56; j++)
-				cout << "_";
+			if (height != 0)
+				cout << limit;
+
+			else
+				cout << line;
+
+			for (int default_width = 0; default_width < 35; ++default_width)
+				cout << line;
+
 		}
-		if (i != 0)
-			cout << "|";
+
+		if (height != 0)
+			cout << limit;
 
 		cout << endl;
 	}
+
+	return EXIT_SUCCESS;
 }

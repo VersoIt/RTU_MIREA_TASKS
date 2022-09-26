@@ -1,6 +1,12 @@
 ﻿  Source.cpp
-C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(25,50): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(25,30): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(26,48): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(26,28): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(15,24): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(16,32): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(16,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(17,22): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(18,33): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(18,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(23,66): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(23,34): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(24,63): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(24,32): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
   4.5.vcxproj -> C:\Users\Ruslan\source\repos\Homework\x64\Debug\4.5.exe

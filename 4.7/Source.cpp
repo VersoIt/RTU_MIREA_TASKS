@@ -5,7 +5,7 @@ int reccurent(int i, int S = 0)
 {
 	if (i <= 0)
 	{
-		std::cout << "i = 0 | S = 0" << std::endl;
+		std::cout << "Variant = 0 | S = 0" << std::endl;
 		return 0;
 	}
 
@@ -32,10 +32,10 @@ int main()
 	if (count < 0)
 	{
 		std::cout << "Введено неверное значение!" << std::endl;
-		return -1;
+		return EXIT_FAILURE;
 	}
 
 	reccurent(count);
 
-	return 0;
+	return EXIT_SUCCESS;
 }

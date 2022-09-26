@@ -8,17 +8,13 @@
 
 using namespace std;
 
+
 tuple<char, int> get_rarely_found_vowel(const string& text)
 {
 	unordered_map<char, int> elements_counts;
 
 	for (int i{ 0 }; i < text.size(); ++i)
-	{
-		if (elements_counts.count(text[i]) == 0)
-			elements_counts[text[i]] = 1;
-		else
-			elements_counts[text[i]]++;
-	}
+		elements_counts[text[i]]++;
 
 	int max_count{ 0 };
 	char symbol{ 0 };
@@ -34,6 +30,7 @@ tuple<char, int> get_rarely_found_vowel(const string& text)
 
 	return std::make_pair(symbol, max_count);
 }
+
 
 int main()
 {
@@ -57,7 +54,7 @@ int main()
 		get_rarely_found_vowel(readed);
 
 		auto [symbol, frequency_count] = get_rarely_found_vowel(readed);
-		cout << "Symbol " << symbol << " recurs most frequently: " << frequency_count << " times!";
+		cout << "Symbol [\'" << symbol << "\'] recurs most frequently: " << frequency_count << " times!";
 	}
 	else
 	{

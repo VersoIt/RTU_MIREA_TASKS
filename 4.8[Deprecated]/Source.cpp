@@ -25,17 +25,6 @@ int main()
 	};
 
 
-
-	/*for (int i{ 0 }; i < current.getRowsCount(); ++i)
-	{
-		for (int j{ 0 }; j < other.getColumnsCount(); ++j)
-		{
-			for (int k{ 0 }; k < current.getColumnsCount(); ++k)
-				product.m_data[i][j] += current.m_data[i][k] * other.m_data[k][j];
-		}
-	}*/
-
-
 	float product[3][2]{ 0.0f };
 	// Умножение матриц
 	for (int i = 0; i < 3; ++i)
