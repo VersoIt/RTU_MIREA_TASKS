@@ -16,6 +16,14 @@ int decodate(const std::string& number)
 		{'M', 1000},
 	};
 
+	for (int i = 0; i < number.size(); ++i)
+	{
+		if (roman_comparison[number[i]] == 0)
+		{
+			throw std::exception("ERROR");
+		}
+	}
+
 	int sum = 0;
 	for (int i = 0; i < number.size(); ++i)
 	{

@@ -16,22 +16,11 @@ int main()
 	const int width_p = 2;
 	const int height_p = 4;
 
-
-	cout << "Enter matrix of counts: " << endl;
 	float matrix_of_counts[height_c][width_c] {
 		{5.f, 2.f, 0.f, 10.f},
 		{3.f, 5.f, 2.f, 5.f},
 		{20.f, 0.f, 0.f, 0.f}
 	};
-
-	for (int i = 0; i < height_c; ++i)
-	{
-		for (int j = 0; j < width_c; ++j)
-		{
-			cout << "[" << i << "][" << j << "]" << " = ";
-			cin >> matrix_of_counts[i][j];
-		}
-	}
 
 	float price_matrix[height_p][width_p] {
 		{1.20f, 0.5f},
@@ -39,16 +28,6 @@ int main()
 		{5.0f, 1.0f},
 		{2.0f, 1.5f}
 	};
-
-	cout << "Enter price matrix: " << endl;
-	for (int i = 0; i < height_p; ++i)
-	{
-		for (int j = 0; j < width_p; ++j)
-		{
-			cout << "[" << i << "][" << j << "]" << " = ";
-			cin >> price_matrix[i][j];
-		}
-	}
 
 
 	float product[3][2]{ 0.0f };

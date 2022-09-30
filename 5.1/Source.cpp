@@ -64,22 +64,31 @@ string convert(const string& number, int base_radix, int new_radix)
 int main()
 {
 	string original_number;
-
+	setlocale(LC_ALL, "Russian");
 	int base_radix;
 	int new_radix;
 
-	cout << "Enter your number: ";
+	cout << "¬ведите число: ";
 	cin >> original_number;
 
-	cout << "Enter current foundation of your number: ";
+	cout << "¬ведите текущее основание счислени€: ";
 	cin >> base_radix;
 
-	cout << "Enter new foundation of your number: ";
+	for (int i = 0; i < original_number.size(); ++i)
+	{
+		if (base_radix <= original_number[i] - '0')
+		{
+			cout << "ERROR" << endl;
+			return -1;
+		}
+	}
+
+	cout << "¬ведите новое основание счислени€: ";
 	cin >> new_radix;
 
 	try
 	{
-		cout << "Great! Result is " << convert(original_number, base_radix, new_radix) << endl;
+		cout << "Great! ¬аш результат равен " << convert(original_number, base_radix, new_radix) << endl;
 	}
 	catch (exception e)
 	{

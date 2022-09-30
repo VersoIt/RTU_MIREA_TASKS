@@ -12,7 +12,7 @@ int main(int argc, char* argv)
 	cout << "¬ведите S, m и n через пробел" << endl;
 	cin >> S >> m >> n;
 
-	double p = 0.00001;
+	double p = 0.0001;
 
 	cout << "—читаем..." << endl;
 	while ((S * p / 100 * pow((1 + p / 100), n)) / (12 * (pow((1 + p / 100), n) - 1)) < m)

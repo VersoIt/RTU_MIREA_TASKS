@@ -3,17 +3,17 @@
 #include <string>
 
 
-bool pass_string(const std::string& str)
-{
-	for (int i = 0; i < str.size(); ++i)
-	{
-		if (!isdigit(str[i]))
-			return false;
-
-	}
-
-	return true;
-}
+//bool pass_string(const std::string& str)
+//{
+//	for (int i = 0; i < str.size(); ++i)
+//	{
+//		if (!isdigit(str[i]))
+//			return false;
+//
+//	}
+//
+//	return true;
+//}
 
 // «Файл»
 int main(int argc, char* argv)
@@ -35,24 +35,23 @@ int main(int argc, char* argv)
 			string number;
 
 			cout << "Число #" << i + 1 << ": ";
-			cin >> number;
-
-			if (!pass_string(number))
+			try
 			{
-				cout << "Введенная строка не является числом!" << endl;
-				return EXIT_FAILURE;
+				cin >> number;
+				file << stod(number.c_str()) << " ";
 			}
-			
-			file << stoi(number.c_str()) << " ";
+			catch (exception)
+			{
+				cout << "Неверная строка!" << endl;
+				return 1;
+			}
 		}
 
 		file.close();
 		file.open(file_path, std::ios::in);
 
-		std::string line;
-		long sum{ 0 };
-
-		int temp;
+		double sum{ 0 };
+		double temp;
 		while (file >> temp)
 			sum += temp;
 

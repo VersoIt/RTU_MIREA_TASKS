@@ -44,7 +44,7 @@ int main()
 	setlocale(LC_ALL, "Russian");
 
 	string file_name;
-	cout << "Enter name of file: ";
+	cout << "ֲגוהטעו טלÿ פאיכא: ";
 	cin >> file_name;
 
 	fstream file(file_name, ios::in);
