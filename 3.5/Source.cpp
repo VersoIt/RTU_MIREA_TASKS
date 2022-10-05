@@ -15,21 +15,23 @@ int main(int argc, char* argv)
 	int count = rand() % 31 + 30;
 
 	cout << "Генерация символов для файла длиной " << count << " символов" << endl;
-	fstream file(file_name, ios::out);
+	fstream file(file_name, ios::out | ios::in);
 	string text = "";
 	for (int i = 0; i < count; ++i)
 		text += (char)('A' + rand() % 26);
 
 	file << text;
+	file.close();
 
+	file.open("somefile.txt");
 	string line;
 	getline(file, line);
 	cout << "Считываем данные из файла..." << endl;
 
 	// Сортировка данных из файла
-	for (int i{ 0 }; i < line.size(); ++i)
+	for (int i = 0; i < line.size(); ++i)
 	{
-		for (int j{ i + 1 }; j < line.size(); ++j)
+		for (int j = i + 1; j < line.size(); ++j)
 		{
 			if ((char)(line[i]) > (char)(line[j]))
 				swap(line[i], line[j]);

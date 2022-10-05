@@ -7,7 +7,7 @@ int sign(double number)
 	return number < 0 ? -1 : number == 0 ? 0 : 1;
 }
 
-// «Çíàê ÷èñëà
+// «Çíàê ÷èñëà (Íå ïğîâåğåíî)
 int main(int argc, char* argv)
 {
 	using namespace std;
@@ -19,7 +19,7 @@ int main(int argc, char* argv)
 	cin >> number;
 	if (cin.fail())
 	{
-		cout << "ERROR" << endl;
+		cout << "Îøèáêà ââîäà: ıòî íå ÷èñëî!" << endl;
 		return EXIT_FAILURE;
 	}
 

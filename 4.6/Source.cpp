@@ -3,7 +3,7 @@
 #include <iomanip>
 #include <map>
 
-// Декодирует римскую запись числа
+// Декодирует римскую запись числа (Не проверено)
 int decodate(const std::string& number)
 {
 	std::map<char, int> roman_comparison{
@@ -20,7 +20,7 @@ int decodate(const std::string& number)
 	{
 		if (roman_comparison[number[i]] == 0)
 		{
-			throw std::exception("ERROR");
+			throw std::exception("Ошибка: неизвестный символ!");
 		}
 	}
 

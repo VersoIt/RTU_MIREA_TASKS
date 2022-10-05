@@ -60,7 +60,7 @@ string convert(const string& number, int base_radix, int new_radix)
 	return result;
 }
 
-// Системы счисления
+// Системы счисления (Не проверено)
 int main()
 {
 	string original_number;
@@ -79,7 +79,7 @@ int main()
 		if (base_radix <= original_number[i] - '0')
 		{
 			cout << "ERROR" << endl;
-			return -1;
+			return 0;
 		}
 	}
 

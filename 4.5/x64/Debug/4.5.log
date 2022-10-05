@@ -6,7 +6,9 @@ C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(17,22): warning C4244: ар
 C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(18,33): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
 C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(18,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
 C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(23,97): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(23,47): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(23,48): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
 C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(24,95): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(24,45): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(24,46): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(37,9): warning C4101: offset_x: неиспользованная локальная переменная
+C:\Users\Ruslan\source\repos\Homework\4.5\Source.cpp(37,19): warning C4101: offset_y: неиспользованная локальная переменная
   4.5.vcxproj -> C:\Users\Ruslan\source\repos\Homework\x64\Debug\4.5.exe

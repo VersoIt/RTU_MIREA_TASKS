@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 
 
 using namespace std;
@@ -31,14 +32,14 @@ vector<int> get_prime_numbers(int number)
 // Решето Эратосфена
 int main()
 {
-	cout << "Enter number diaposone: ";
+	setlocale(LC_ALL, "Russian");
+	cout << "Введите длину диапозона: ";
 
 	int prime_limit;
 	cin >> prime_limit;
-
 	vector<int> primes = get_prime_numbers(prime_limit);
 
-	cout << "Your prime numbers: ";
+	cout << "Ваши простые числа: ";
 	for (int i{ 0 }; i < primes.size(); ++i)
 		cout << primes[i] << " ";
 
