@@ -5,13 +5,11 @@ using namespace std;
 double calculate(int N)
 {
 	double sum = 0;
+	double sin_sum = 0;
 
 	for (int i = 1; i <= N; ++i)
 	{
-		double sin_sum = 0;
-		for (int j = 1; j <= i; ++j)
-			sin_sum += sin(j);
-
+		sin_sum += sin(i);
 		sum += i / sin_sum;
 	}
 	return sum;

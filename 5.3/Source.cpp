@@ -1,47 +1,24 @@
 #include <iostream>
-#include <vector>
-#include <string>
-
 
 using namespace std;
 
-bool is_prime(int number)
-{
-	for (int i{ 2 }; i <= (int)sqrt(number); ++i)
-	{
-		if (number % i == 0)
-			return false;
-	}
-
-	return true;
-}
-
-vector<int> get_prime_numbers(int number)
-{
-	vector<int> primes;
-
-	for (int i{ 2 }; i < number; ++i)
-	{
-		if (is_prime(i))
-			primes.push_back(i);
-	}
-
-	return primes;
-}
-
-// Решето Эратосфена
 int main()
 {
-	setlocale(LC_ALL, "Russian");
-	cout << "Введите длину диапозона: ";
+    int n;
+    cout << "n = ";
+    cin >> n;
 
-	int prime_limit;
-	cin >> prime_limit;
-	vector<int> primes = get_prime_numbers(prime_limit);
+    int* a = new int[n + 1];
+    for (int i = 0; i < n + 1; i++)
+        a[i] = i;
 
-	cout << "Ваши простые числа: ";
-	for (int i{ 0 }; i < primes.size(); ++i)
-		cout << primes[i] << " ";
-
-	return EXIT_SUCCESS;
+    for (int p = 2; p < n + 1; p++)
+    {
+        if (a[p] != 0)
+        {
+            cout << a[p] << endl;
+            for (int j = p * p; j < n + 1; j += p)
+                a[j] = 0;
+        }
+    }
 }
