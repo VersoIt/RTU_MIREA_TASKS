@@ -1,0 +1,3 @@
+﻿  TreeSort.cpp
+C:\Users\user\source\repos\RTU_MIREA_TASKS\TreeSort\TreeSort.cpp(47): warning C4715: add_node: значение возвращается не при всех путях выполнения
+  TreeSort.vcxproj -> C:\Users\user\source\repos\RTU_MIREA_TASKS\x64\Debug\TreeSort.exe
